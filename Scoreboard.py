@@ -22,10 +22,18 @@ class Score(Turtle):
         self.clear()
         self.update_scoreboard()
 
-    def game_over(self):
-        self.color("white")
-        self.goto(0,0)
-        self.write("Game Over", align="center", font=("Arial", 30, "normal"))
+    # def game_over(self):
+    #     self.color("white")
+    #     self.goto(0,0)
+    #     self.write("Game Over", align="center", font=("Arial", 30, "normal"))
+
+
+    def reset(self):
+        if self.update>self.highscore:
+            self.highscore=self.update
+        self.update=0
+        self.update_scoreboard()
+
 
 
 
