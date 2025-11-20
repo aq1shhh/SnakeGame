@@ -9,6 +9,7 @@ class Score(Turtle):
         self.update = 0
         self.color("white")
         self.penup()
+        self.highscore=0
         self.goto(0, 220)
 
         self.hideturtle()
